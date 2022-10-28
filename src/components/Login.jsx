@@ -18,8 +18,6 @@ function Login() {
     
       return (
         <div>
-          <h1>This is the Home page</h1>
-          <p>I can't see my house here.</p>
           <Navigation />
           <ErrorBoundary>
             <Counter />

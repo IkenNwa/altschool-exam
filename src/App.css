@@ -1,5 +1,6 @@
 :root{
-  --gradientColor: linear-gradient(270deg, #FF0000, #FFA200)
+  --gradientColor: linear-gradient(270deg, #FF0000, #FFA200);
+  --hovers: #d0d0d0;
 }
 *{
   margin: 0;
@@ -10,4 +11,37 @@
 body{
   display: flex;
   flex-direction: column;
+}
+.navigation{
+  display: flex;
+  height: 10vh;
+  align-items: center;
+  background: var(--gradientColor);
+}
+.active{
+  text-decoration: none;
+  margin-inline: 10px;
+  color: #ffffff;
+  height: inherit;
+  align-items: center;
+  display: flex;
+  width: 90px;
+  justify-content: center;
+}
+.inactive{
+  text-decoration: none;
+  color: #ffffff;
+  margin-inline: 10px;
+  height: inherit;
+  align-items: center;
+  display: flex;
+  width: 90px;
+  justify-content: center;
+}
+
+.active:hover{
+  background: var(--hovers);
+}
+.inactive:hover{
+  background: var(--hovers);
 }
