@@ -1,3 +1,9 @@
-# altschool-exam
+# Altschool Africa Exam Project-1
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vitejs-vite-6s6xdu)
+## Instuctions
+
+## Submission Guidelines
+
+## UI Colors
+
+Thank You
