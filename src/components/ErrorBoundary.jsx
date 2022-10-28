@@ -1,3 +1,6 @@
+import React from "react";
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -15,11 +18,7 @@ class ErrorBoundary extends React.Component {
       return (
         <div>
           <h2>An Error Has Occurred</h2>
-          <details>
-            {this.state.error && this.state.error.toString()}
-            <br />
-            {this.state.errorInfo.componentStack}
-          </details>
+          <p>Something Went Wrong</p>
         </div>
       );
     }
