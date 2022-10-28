@@ -5,7 +5,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello! Nigeria</h1>
       <RouterApp />
     </div>
   )
