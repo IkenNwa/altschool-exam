@@ -1,26 +1,26 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
     <div className="navigation">
-      <NavLink
-        className={({ isActive }) => (isActive ? "active" : "inactive")}
+      <Link
+        className="active"
         to="/"
       >
         Home
-      </NavLink>
-      <NavLink
-        className={({ isActive }) => (isActive ? "active" : "inactive")}
+      </Link>
+      <Link
+        className="active"
         to="/dashboard"
       >
         Dashboard
-      </NavLink>
-      <NavLink
-        className={({ isActive }) => (isActive ? "active" : "inactive")}
+      </Link>
+      <Link
+        className="active"
         to="/login"
       >
         Login
-      </NavLink>
+      </Link>
     </div>
   );
 }

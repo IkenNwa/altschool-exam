@@ -15,7 +15,9 @@ body{
 .navigation{
   display: flex;
   height: 10vh;
+  padding: 5px;
   align-items: center;
+  justify-content: center;
   background: var(--gradientColor);
 }
 .active{
@@ -28,20 +30,7 @@ body{
   width: 90px;
   justify-content: center;
 }
-.inactive{
-  text-decoration: none;
-  color: #ffffff;
-  margin-inline: 10px;
-  height: inherit;
-  align-items: center;
-  display: flex;
-  width: 90px;
-  justify-content: center;
-}
 
 .active:hover{
-  background: var(--hovers);
-}
-.inactive:hover{
   background: var(--hovers);
 }
