@@ -5,7 +5,7 @@ function PageNotFound() {
     <div>
       <Navigation />
       <div className="notFound">
-        <h1>404 Page</h1>
+        <h1>404</h1>
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXk4M2_nO6Tuq_y9xVkj7X20IDUc-j5XKpGpM5OUuFZw&s"
           alt="Broken"
