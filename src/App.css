@@ -22,7 +22,7 @@ body{
 }
 .active{
   text-decoration: none;
-  margin-inline: 10px;
+  margin-inline: auto;
   color: #ffffff;
   height: inherit;
   align-items: center;
@@ -33,4 +33,37 @@ body{
 
 .active:hover{
   background: var(--hovers);
+}
+.button{
+  width: 40%;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background: var(--gradientColor);
+  background-size: cover;
+  color: #f0eeee;
+  cursor: pointer;
+  padding: 10px;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  padding: 3em;
+}
+.user-image{
+  border-radius: 50%;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 1px 7px 10px var(--hovers);
+  width: fit-content;
+  height: fit-content;
 }
