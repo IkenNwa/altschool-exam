@@ -1,12 +1,20 @@
 import Navigation from "./Navigation";
 
 function PageNotFound() {
-    return (
-        <div>
-            <Navigation />
-            <h1>404 Page</h1>
-            <h3>The Page you are looking for does not exist or may have been deleted!</h3>
-        </div>
-    )
+  return (
+    <div>
+      <Navigation />
+      <div className="notFound">
+        <h1>404 Page</h1>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXk4M2_nO6Tuq_y9xVkj7X20IDUc-j5XKpGpM5OUuFZw&s"
+          alt="Broken"
+        />
+        <h3>
+          The Page you are looking for does not exist or may have been deleted!
+        </h3>
+      </div>
+    </div>
+  );
 }
-export default PageNotFound
+export default PageNotFound;

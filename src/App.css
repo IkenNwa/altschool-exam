@@ -69,3 +69,10 @@ body{
   width: fit-content;
   height: fit-content;
 }
+.notFound{
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
