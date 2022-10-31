@@ -21,12 +21,12 @@ function Login() {
       <div>
         {user ? (
           <div>
-            <h1>You are Logged In</h1>
+            <h1>Logged In</h1>
             <p>Go to the Dashboard</p>
           </div>
         ) : (
           <div>
-            <h1>You are Logged Out</h1>
+            <h1>Logged Out</h1>
           </div>
         )}
       </div>
