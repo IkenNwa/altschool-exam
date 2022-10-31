@@ -1,6 +1,7 @@
 :root{
   --gradientColor: linear-gradient(270deg, #FF0000, #FFA200);
-  --hovers: #d0d0d0;
+  --hovers: #00ff00;
+  --shadows: #868484aa;
 }
 *{
   margin: 0;
@@ -51,6 +52,7 @@ body{
   justify-content: center;
   height: 90vh;
   padding: 3em;
+  background-color: #ffe1b9;
 }
 .user-image{
   border-radius: 50%;
@@ -63,7 +65,7 @@ body{
   background: #FFFFFF;
   border-radius: 20px;
   padding: 10px;
-  box-shadow: 1px 7px 10px var(--hovers);
+  box-shadow: 1px 7px 10px var(--shadows);
   width: fit-content;
   height: fit-content;
 }
