@@ -33,7 +33,7 @@ body{
 }
 
 .active:hover{
-  background: var(--hovers);
+  border-bottom: 7px solid black;
 }
 .button{
   width: 40%;
