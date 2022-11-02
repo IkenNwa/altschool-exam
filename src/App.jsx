@@ -10,11 +10,11 @@ function App() {
   const providerUser = useMemo(() => ({user, setUser}), [user, setUser])
 
   return (
-    <div className="App">
+    <>
       <UserContext.Provider value={providerUser} >
         <RouterApp />
       </UserContext.Provider>
-    </div>
+    </>
   );
 }
 

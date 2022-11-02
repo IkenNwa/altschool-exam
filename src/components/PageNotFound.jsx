@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
 
 function PageNotFound() {
@@ -13,6 +14,7 @@ function PageNotFound() {
         <h3>
           The Page you are looking for does not exist or may have been deleted!
         </h3>
+        <p>👈<Link to="/">Go Back</Link></p>
       </div>
     </div>
   );

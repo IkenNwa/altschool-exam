@@ -12,10 +12,10 @@ function RouterApp() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<DashBoard />}>
-          <Route path="/dashboard/all" element={<All />} />
-          <Route path="/dashboard/work" element={<Work />} />
-          <Route path="/dashboard/casual" element={<Casual />} />
+        <Route path="/dashboard/*" element={<DashBoard />}>
+          <Route path="all" element={<All />} />
+          <Route path="work" element={<Work />} />
+          <Route path="casual" element={<Casual />} />
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />

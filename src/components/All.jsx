@@ -1,8 +1,10 @@
+import NoFive from "./NoFive";
 
 function All() {
   return (
     <div>
-      <h1>All</h1>
+      <h2>Test Error Boundary</h2>
+        <NoFive />
     </div>
   );
 }
