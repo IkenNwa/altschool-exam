@@ -14,7 +14,7 @@ function Login() {
     console.log(pwd);
 
     const user = await userlogin(pwd);
-    if (pwd === "1007") {
+    if (pwd === "blank") {
       setUser(user);
     }
   }

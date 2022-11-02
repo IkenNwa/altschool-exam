@@ -15,7 +15,10 @@ function Home() {
             <UserHome />
           </div>
         ) : (
-          <Navigate replace to="/login" />
+          <div>{
+          alert("Login First")}
+            <Navigate replace to="/login" />
+            </div>
         )}
       </div>
     </div>

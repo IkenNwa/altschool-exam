@@ -19,7 +19,10 @@ function DashBoard() {
           </div>
         </div>
       ) : (
-        <Navigate replace to="/login" />
+        <div>
+          {alert("Login First!!")}
+          <Navigate replace to="/login" />
+        </div>
       )}
     </div>
   );

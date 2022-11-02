@@ -1,6 +1,5 @@
 :root{
   --gradientColor: linear-gradient(270deg, #FF0000, #FFA200);
-  --hovers: #00ff00;
   --shadows: #868484aa;
 }
 *{
@@ -12,6 +11,7 @@
 body{
   display: flex;
   flex-direction: column;
+  background: radial-gradient(circle, #ff000088 0%, #ffa10044 100%);
 }
 .navigation{
   display: flex;
@@ -52,21 +52,30 @@ body{
   justify-content: center;
   height: 90vh;
   padding: 3em;
-  background-color: #ffe1b9;
 }
 .user-image{
   border-radius: 50%;
+}
+input{
+  padding: 7px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: 10px;
 }
 .wrapper{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #FFFFFF;
+  background: #efefefdd;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 10px;
   box-shadow: 1px 7px 10px var(--shadows);
   width: fit-content;
+  text-align: center;
   height: fit-content;
 }
 .notFound{
@@ -79,6 +88,8 @@ body{
 .grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
 }
 .inline{
   display: inline-flex;

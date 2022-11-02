@@ -1,29 +1,25 @@
 import { useState } from "react";
-import ErrorBoundary from "./ErrorBoundary";
+import ErrorBoundaries from "./ErrorBoundary";
 
 function NoFive() {
-  const [num1, setNum1] = useState("0");
-  const [num2, setNum2] = useState("0");
-  const [result, setResult] = useState(0);
-
   const factors = (number) =>
     Array.from(Array(number + 1), (_, i) => i).filter((i) => number % i === 0);
 
-  function solve() {
-    let results = parseFloat(num1) + parseFloat(num2);
-    setResult(results);
-    let resultss = factors(results);
-    if (resultss.indexOf(5) !== -1) {
-      throw new ErrorBoundary("Has Five as its Factor");
-    }
-  }
+  function Turn() {
+    const [num1, setNum1] = useState("0");
+    const [num2, setNum2] = useState("0");
+    const [result, setResult] = useState(0);
+    const [fresults, setFresults] = useState([]);
 
-  return (
-    <div>
-      <h4>No Five!</h4>
-      <p>
-        <em>NB: Your Result must not have five as its Factor</em>
-      </p>
+    function solve() {
+      let results = parseFloat(num1) + parseFloat(num2);
+      setResult(results);
+      setFresults(factors(results))
+    }
+    if (fresults.indexOf(5) !== -1) {
+      throw new ErrorBoundaries("Has Five as its Factor");
+    }
+    return (
       <div className="wrapper">
         <div>
           <input type="number" onChange={(e) => setNum1(e.target.value)} /> +{" "}
@@ -34,6 +30,18 @@ function NoFive() {
           Solve
         </button>
       </div>
+    );
+  }
+
+  return (
+    <div>
+      <h4>No Five!</h4>
+      <p>
+        <em>NB: Your Result must not have five as its Factor</em>
+      </p>
+      <ErrorBoundaries>
+        <Turn />
+      </ErrorBoundaries>
     </div>
   );
 }

@@ -21,6 +21,14 @@ function UserHome() {
             <h3>Stats</h3>
             <p>{user.stats}</p>
           </div>
+          <div>
+            <h3>Stats</h3>
+            <p>{user.stats}</p>
+          </div>
+          <div>
+            <h3>Stats</h3>
+            <p>{user.stats}</p>
+          </div>
         </div>
       </div>
     </div>
