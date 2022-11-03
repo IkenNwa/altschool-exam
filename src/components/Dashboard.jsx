@@ -10,26 +10,28 @@ function DashBoard() {
   return (
     <div>
       <SEO
-        title="Dasboard"
-        description="This Page contains nested routes"
-        type="page"
-        name="Dashboard Page"
-      />
-      {user ? (
-        <div>
-          <Navigation />
-          <div className="container">
-            <h1>Dashboard here</h1>
-            <MiniNav />
-            <Outlet />
+          title="Dasboard"
+          description="This Page contains nested routes"
+          type="page"
+          name="Dashboard Page"
+        />
+      <div>
+        {user ? (
+          <div>
+            <Navigation />
+            <div className="container">
+              <h1>Dashboard here</h1>
+              <MiniNav />
+              <Outlet />
+            </div>
           </div>
-        </div>
-      ) : (
-        <div>
-          {alert("Login First!!")}
-          <Navigate replace to="/login" />
-        </div>
-      )}
+        ) : (
+          <div>
+            {alert("Login First!!")}
+            <Navigate replace to="/login" />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
