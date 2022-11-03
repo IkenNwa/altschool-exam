@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
+import SEO from "./SEO";
 
 function PageNotFound() {
   return (
@@ -12,12 +13,12 @@ function PageNotFound() {
       />
       <Navigation />
       <div className="notFound">
-        <h1>404</h1>
+        <h1 className="nt-Title">404</h1>
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXk4M2_nO6Tuq_y9xVkj7X20IDUc-j5XKpGpM5OUuFZw&s"
           alt="Broken"
         />
-        <h3>
+        <h3 className="nt-desc">
           The Page you are looking for does not exist or may have been deleted!
         </h3>
         <p>👈<Link to="/">Go Back</Link></p>

@@ -1,12 +1,27 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function MiniNav() {
   return (
-    <>
-      <Link to="/dashboard/all">All</Link>
-      <Link to="/dashboard/work">Work</Link>
-      <Link to="/dashboard/casual">Casual</Link>
-    </>
+    <div className="nest">
+      <NavLink
+        className={({ isActive }) => (isActive ? "active" : "inactive")}
+        to="/dashboard/all"
+      >
+        All
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "active" : "inactive")}
+        to="/dashboard/work"
+      >
+        Work
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "active" : "inactive")}
+        to="/dashboard/casual"
+      >
+        Casual
+      </NavLink>
+    </div>
   );
 }
 export default MiniNav;

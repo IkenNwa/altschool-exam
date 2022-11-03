@@ -4,19 +4,19 @@ function Navigation() {
   return (
     <div className="navigation">
       <Link
-        className="active"
+        className="nav-item"
         to="/"
       >
         Profile
       </Link>
       <Link
-        className="active"
+        className="nav-item"
         to="/dashboard"
       >
         Dashboard
       </Link>
       <Link
-        className="active"
+        className="nav-item"
         to="/login"
       >
         Login

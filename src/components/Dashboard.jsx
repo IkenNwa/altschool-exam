@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import MiniNav from "./MiniNav";
 import Navigation from "./Navigation";
+import SEO from "./SEO";
 import { UserContext } from "./UserContext";
 
 function DashBoard() {
@@ -19,8 +20,8 @@ function DashBoard() {
         {user ? (
           <div>
             <Navigation />
-            <div className="container">
-              <h1>Dashboard here</h1>
+            <h1>Welcome to your Dasboard</h1>
+            <div className="dashboard">
               <MiniNav />
               <Outlet />
             </div>

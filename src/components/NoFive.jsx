@@ -12,29 +12,32 @@ function NoFive() {
     const [fresults, setFresults] = useState([]);
 
     function solve() {
+      if (num1 === "" && num2 === "") {
+        throw new ErrorBoundaries();
+      }
       let results = parseFloat(num1) + parseFloat(num2);
       setResult(results);
-      setFresults(factors(results))
+      setFresults(factors(results));
     }
     if (fresults.indexOf(5) !== -1) {
-      throw new ErrorBoundaries("Has Five as its Factor");
+      throw new ErrorBoundaries();
     }
     return (
-      <div className="wrapper">
-        <div>
-          <input type="number" onChange={(e) => setNum1(e.target.value)} /> +{" "}
-          <input type="number" onChange={(e) => setNum2(e.target.value)} />{" "}
+      <div className="flex">
+        <div className="inputs">
+          <input type="number" onChange={(e) => setNum1(e.target.value)} />{" "} +
+          <input type="number" onChange={(e) => setNum2(e.target.value)} />
         </div>
-        <div>{result}</div>
-        <button onClick={solve} className="button">
+        <button onClick={solve} className="button2">
           Solve
         </button>
+        <div>{result}</div>
       </div>
     );
   }
 
   return (
-    <div>
+    <div className="user">
       <h4>No Five!</h4>
       <p>
         <em>NB: Your Result must not have five as its Factor</em>

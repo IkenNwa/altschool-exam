@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import Navigation from "./Navigation";
 import SEO from "./SEO";
 import { UserContext } from "./UserContext";
@@ -19,9 +19,7 @@ function Login() {
       setUser(user);
     }
   }
-  function handleLogout() {
-    setUser(null);
-  }
+  
   return (
     <div>
       <SEO
@@ -31,19 +29,15 @@ function Login() {
         name="Login Page"
       />
       <Navigation />
-      <div className="container">
-        <div className="wrapper">
+      <div>
+        <div>
             {user ? (
               <>
-                <h1>Logged In</h1>
-                <p><Link to="/">Go back Home</Link></p>
-                <button className="button" onClick={handleLogout}>
-                  Logout
-                </button>
+                <Navigate replace to="/" />
               </>
             ) : (
               <>
-                <form onSubmit={handleLogin}>
+                <form onSubmit={handleLogin} className="form">
                   <label htmlFor="name">Username: </label>
                   <input
                     type="text"
@@ -51,7 +45,6 @@ function Login() {
                     placeholder="Username"
                     required
                   />
-                  <br />
                   <label htmlFor="pwd">Password: </label>
                   <input
                     type="password"

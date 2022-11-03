@@ -7,6 +7,7 @@ import UserHome from "./UserHome";
 
 function Home() {
   const { user, setUser } = useContext(UserContext);
+  
   return (
     <div>
       <SEO
@@ -16,14 +17,14 @@ function Home() {
         name="Casual Page"
       />
       <Navigation />
-      <div className="container">
+      <div className="home">
         {user ? (
           <div className="wrapper">
             <UserHome />
           </div>
         ) : (
           <div>{
-          alert("Login First")}
+          alert("You are logged out")}
             <Navigate replace to="/login" />
             </div>
         )}

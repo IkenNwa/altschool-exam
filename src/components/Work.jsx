@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SEO from "./SEO";
 
 function Work() {
   const [low, setLow] = useState(null);
@@ -17,6 +18,7 @@ function Work() {
     }
     loop();
     odds = arr.filter((num) => num % 2 === 1);
+    odds.splice(0, 1)
     setOdd(odds.toString());
     setLength(odds.length)
   }
@@ -39,7 +41,7 @@ function Work() {
       <input type="number" onChange={(e) => setHigh(e.target.value)} maxLength="2" required />
       </div>
       <button onClick={countOdds} className="button">Count Odds</button>
-      <p>{odd}  {odd ? (`and is ${length - 1} in Length.`): (" ")}</p>
+      <p className="result">{odd}  {odd ? (`and is ${length} in Length.`): (" ")}</p>
     </div>
   );
 }

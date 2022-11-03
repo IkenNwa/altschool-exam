@@ -3,33 +3,19 @@ import { UserContext } from "./UserContext";
 
 function UserHome() {
   const { user, setUser } = useContext(UserContext);
+  function handleLogout() {
+    setUser(null);
+  }
 
   return (
     <div>
-      <div>
+      <div className="user">
         <img className="user-image" src={user.profile} alt={user.username} />
-        <h1>Welcome {user.name}</h1>
-        <p>This is your E-Mail: {user.email}</p>
+        <h1 className="user-title">Welcome {user.name}</h1>
+        <p className="user-email">This is your E-Mail: {user.email}</p>
+    <button className="button" onClick={handleLogout}>LogOut</button>
       </div>
-      <div>
-        <div className="grid">
-          <div>
-            <h3>Stats</h3>
-            <p>{user.stats}</p>
-          </div>
-          <div>
-            <h3>Stats</h3>
-            <p>{user.stats}</p>
-          </div>
-          <div>
-            <h3>Stats</h3>
-            <p>{user.stats}</p>
-          </div>
-          <div>
-            <h3>Stats</h3>
-            <p>{user.stats}</p>
-          </div>
-        </div>
+      <div className="container">
       </div>
     </div>
   );
