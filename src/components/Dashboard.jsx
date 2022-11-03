@@ -9,6 +9,12 @@ function DashBoard() {
 
   return (
     <div>
+      <SEO
+        title="Dasboard"
+        description="This Page contains nested routes"
+        type="page"
+        name="Dashboard Page"
+      />
       {user ? (
         <div>
           <Navigation />

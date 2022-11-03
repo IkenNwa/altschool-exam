@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
+import SEO from "./SEO";
 import { UserContext } from "./UserContext";
 import { userlogin } from "./UserLogin";
 
@@ -22,11 +23,16 @@ function Login() {
     setUser(null);
   }
   return (
-    <>
+    <div>
+      <SEO
+        title="Login"
+        description="You will have to login before you will see any content"
+        type="page"
+        name="Login Page"
+      />
       <Navigation />
       <div className="container">
         <div className="wrapper">
-          <>
             {user ? (
               <>
                 <h1>Logged In</h1>
@@ -63,10 +69,10 @@ function Login() {
                 </p>
               </>
             )}
-          </>
+          
         </div>
       </div>
-    </>
+    </div>
   );
 }
 export default Login;

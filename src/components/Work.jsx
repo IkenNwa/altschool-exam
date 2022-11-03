@@ -22,6 +22,12 @@ function Work() {
   }
   return (
     <div className="wrapper">
+      <SEO
+        title="Cont Odd numbers"
+        description="This Page Count Odd numbers"
+        type="page"
+        name="Odd numbers page"
+      />
       <h1>Work here!</h1>
       <div>
       <input

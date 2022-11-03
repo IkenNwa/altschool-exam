@@ -7,7 +7,7 @@ function Navigation() {
         className="active"
         to="/"
       >
-        Home
+        Profile
       </Link>
       <Link
         className="active"

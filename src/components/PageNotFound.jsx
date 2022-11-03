@@ -4,6 +4,12 @@ import Navigation from "./Navigation";
 function PageNotFound() {
   return (
     <div>
+      <SEO
+        title="Page not Found"
+        description="The page you were looking for may have been deleted or doesnt exist"
+        type="page"
+        name="Page not found"
+      />
       <Navigation />
       <div className="notFound">
         <h1>404</h1>
