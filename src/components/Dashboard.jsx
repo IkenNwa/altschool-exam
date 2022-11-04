@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Navigate, Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import MiniNav from "./MiniNav";
 import Navigation from "./Navigation";
 import SEO from "./SEO";
@@ -11,15 +11,15 @@ function DashBoard() {
   return (
     <div>
       <SEO
-          title="Dasboard"
-          description="This Page contains nested routes"
-          type="page"
-          name="Dashboard Page"
-        />
-      <div>
+        title="Dasboard"
+        description="This Page contains nested routes"
+        type="page"
+        name="Dashboard Page"
+      />
+      <Navigation />
+      <div className="home">
         {user ? (
           <div>
-            <Navigation />
             <h1>Welcome to your Dasboard</h1>
             <div className="dashboard">
               <MiniNav />
@@ -28,8 +28,10 @@ function DashBoard() {
           </div>
         ) : (
           <div>
-            {alert("Login First!!")}
-            <Navigate replace to="/login" />
+            <h1>You are not Logged in</h1>
+            <p>
+              <Link to="/login">Login</Link> to see more.
+            </p>
           </div>
         )}
       </div>

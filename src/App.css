@@ -22,20 +22,14 @@ body{
   margin: 0 auto;
 }
 
-.form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5px;
-  width: 40%;
-  align-items: center;
-  justify-items: center;
-}
 
 input {
-  padding: 7px;
+  padding: 10px;
   outline: none;
   border: 1px solid #cecece;
   border-radius: 10px;
+  width: 100%;
+  margin-block: 10px;
 }
 
 .button {
@@ -60,8 +54,10 @@ input {
 
 .home {
   display: flex;
+  flex-direction: column;
   padding: 2.5em;
   justify-content: center;
+  align-items: center;
 }
 
 .user {
@@ -69,14 +65,8 @@ input {
   padding: 2em;
   border-radius: 8px;
   background-color: whitesmoke;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  align-items: center;
-  width: 60%;
+  width: fit-content;
+  margin-block: 12px;
 }
 
 .grid2 {
@@ -95,6 +85,7 @@ input {
 .container {
   display: flex;
   justify-content: center;
+  width: 40%;
   padding: 20px;
 }
 
@@ -139,7 +130,7 @@ input {
   padding: 2.5em;
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  height: 80vh;
   align-items: center;
   justify-content: center;
 }
@@ -160,11 +151,23 @@ input {
 }
 .inputs{
   display: flex;
+  flex-direction: column;
   margin-block: 10px;
   align-items: center;
+  width: 100%;
 }
 .flex{
   display: flex;
   flex-direction: column;
+}
+.login{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background: #eeeeeeee;
+  box-shadow: 1px 10px 10px #a5a5a5ee;
+  border-radius: 20px;
   width: fit-content;
+  padding: 2.5em;
 }

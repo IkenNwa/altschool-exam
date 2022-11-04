@@ -25,8 +25,8 @@ function NoFive() {
     return (
       <div className="flex">
         <div className="inputs">
-          <input type="number" onChange={(e) => setNum1(e.target.value)} />{" "} +
-          <input type="number" onChange={(e) => setNum2(e.target.value)} />
+          <input type="number" onChange={(e) => setNum1(e.target.value)} placeholder="First Number" />
+          <input type="number" onChange={(e) => setNum2(e.target.value)} placeholder="Second Number" />
         </div>
         <button onClick={solve} className="button2">
           Solve
@@ -37,7 +37,7 @@ function NoFive() {
   }
 
   return (
-    <div className="user">
+    <>
       <h4>No Five!</h4>
       <p>
         <em>NB: Your Result must not have five as its Factor</em>
@@ -45,7 +45,7 @@ function NoFive() {
       <ErrorBoundaries>
         <Turn />
       </ErrorBoundaries>
-    </div>
+    </>
   );
 }
 

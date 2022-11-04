@@ -3,7 +3,7 @@ import SEO from "./SEO"
 
 function All() {
   return (
-    <div>
+    <div className="user">
       <SEO
         title="ErrorBoundary Test"
         description="This App Runs an error when the solution of two added numbers has a factor of five."

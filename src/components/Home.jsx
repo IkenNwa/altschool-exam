@@ -7,7 +7,7 @@ import UserHome from "./UserHome";
 
 function Home() {
   const { user, setUser } = useContext(UserContext);
-  
+
   return (
     <div>
       <SEO
@@ -23,10 +23,12 @@ function Home() {
             <UserHome />
           </div>
         ) : (
-          <div>{
-          alert("You are logged out")}
-            <Navigate replace to="/login" />
-            </div>
+          <div className="wrapper">
+            <h1>You are not Logged in</h1>
+            <p>
+              <Link to="/login">Login</Link> to see more
+            </p>
+          </div>
         )}
       </div>
     </div>

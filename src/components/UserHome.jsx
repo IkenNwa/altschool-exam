@@ -5,6 +5,7 @@ function UserHome() {
   const { user, setUser } = useContext(UserContext);
   function handleLogout() {
     setUser(null);
+    alert("Successfully Logged out!")
   }
 
   return (
