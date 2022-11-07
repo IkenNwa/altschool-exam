@@ -18,4 +18,9 @@ Implement SEO and Navigation menu that will show on each page.
 
 #FF0000, #FFA200
 
+#Contents
+Router- Whole Application
+ErrorBoundary- (No five) in dashboard all
+404 page- Register
+
 Thank You
